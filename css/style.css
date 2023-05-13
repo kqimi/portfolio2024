@@ -1,0 +1,453 @@
+body {
+    box-sizing: border-box;
+    font-family: "bilo", sans-serif;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.657);
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 10px;
+
+}
+
+header a {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+.nav-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 20px;
+    width: 150px;
+}
+
+.nav-work {
+    margin-right: 35px;
+}
+
+.nav-middle {
+    font-family: "ivyora-display", sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.nav-right {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.contact-button {
+    color: white;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 55px;
+    padding: 5px 30px;
+    margin: 0;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro {
+    font-size: 60px;
+    line-height: 50px;
+    margin: 0 auto;
+}
+
+.intro h1 {
+    margin-bottom: 20px;
+}
+
+
+.skills ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills li {
+    list-style: none;
+    padding: 0 35px;
+    font-weight: 400;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 10px;
+    font-family: sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    transform: translate (-50%, -50%);
+}
+
+svg {
+    width: 14px;
+    display: block;
+    margin: 10px auto;
+}
+
+.arrow {
+    animation: scroll .35s ease-in alternate infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+#projects {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+.container {
+    max-width: 1600px;
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+
+#projects .row {
+    height: auto;
+}
+
+.column {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 30px;
+    margin-bottom: 30px
+}
+
+#projects h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+
+
+}
+
+
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border: 1px solid rgba(206, 206, 206, 0.492);
+    box-shadow: 1px 3px 20px rgba(206, 206, 206, 0.593)
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 1);
+    ;
+}
+
+.card-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1.15;
+    transition: opacity 0.25s, scale 0.35s;
+}
+
+.card:hover .card-image {
+    opacity: 0.5;
+    scale: 1;
+}
+
+.card-body {
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 0.3px;
+
+}
+
+.card-body::before {
+    content: '';
+    position: absolute;
+    inset: 20px;
+    border: 2px solid white;
+    opacity: 0;
+    scale: 1.25;
+    transition: opacity 0.25s, scale 0.25s;
+}
+
+.card:hover .card-body::before {
+    opacity: 1;
+    scale: 1;
+
+}
+
+.card-title {
+    font-size: 30px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s, translate 0.25s;
+    margin: 0 50px;
+    width: 300px;
+}
+
+.card-description {
+    font-size: 1em;
+    opacity: 0;
+    translate: -25px;
+    transition: opacity 0.25s, translate 0.25s;
+    margin: 0 auto;
+}
+
+.card:hover .card-title {
+    opacity: 1;
+    translate: 0;
+}
+
+.card:hover .card-description {
+    opacity: 1;
+    translate: 0;
+}
+
+#about-me {
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+#about-me h2 {
+    font-size: 30px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 50px;
+
+
+}
+
+#about-me img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 500px;
+    max-width: 400px;
+}
+
+.introduction {
+    max-width: 50%;
+}
+
+/* locomotive scroll pin */
+body.locomotived {
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+}
+
+#sectionPin {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+#sectionPin img {
+    height: 80vh;
+    width: auto;
+    object-fit: cover;
+}
+
+.pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px;
+}
+
+.logo img {
+    width: 100px;
+    margin: 0;
+    display: inline;
+
+}
+
+/* Earie Subpage */
+.subpage-hero {
+    margin: 0 auto;
+    height: auto;
+    text-align: center;
+}
+
+.subpage-hero img {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.headline {
+    font-size: 150px;
+    font-family: "Citrus Gothic";
+    color: #610710;
+    letter-spacing: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.projectinfo {
+    margin: 0 auto;
+}
+
+.projectinfo .description {
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    max-width: 55ch;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+.projectinfo img {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+
+
+
+
+.logo .column {
+    display: flex;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 80px;
+    column-gap: 100px;
+}
+
+.logo img {
+    flex: 1;
+}
+
+.flowchart {
+    height: 80vh;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.flowchart img {
+    width: 100%;
+    /* border: 1px solid rgba(0, 0, 0, 0.3); */
+}
+
+.wireframe {
+    height: 100vh;
+    text-align: center;
+}
+
+.wireframe img {
+    max-width: 1000px;
+    width: 100%;
+}
+
+.design {
+    height: 80vh;
+    text-align: center;
+}
+
+.video {
+    height: 100vh;
+    text-align: center;
+}
+
+.video video {
+    display: block;
+    width: 100%;
+}
+
+.problem {
+    height: auto;
+    margin-top: 80px;
+}
+
+.container h2 {
+    font-family: "roc grotesk", sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(42, 42, 42);
+    margin: 0;
+}
+
+.container p {
+    font-size: 18px;
+    max-width: 77ch;
+    margin: 0 auto;
+}
+
+.logo {
+    margin-top: 100px;
+
+
+}
