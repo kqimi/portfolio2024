@@ -371,6 +371,12 @@ body.locomotived {
         padding-bottom: 4em;
     }
 
+    .sango-sub {
+        margin: 0 auto;
+        text-align: center;
+        padding-top: 5em;
+        padding-bottom: 5em;
+    }
 
 
     .subpage-hero img.earieheading {
@@ -422,12 +428,6 @@ body.locomotived {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    height: 60vh;
-}
-
-#earie-vid video {
-    margin: 0 auto;
-
 }
 
 #earie-vid h3 {
@@ -470,6 +470,14 @@ body.locomotived {
         box-shadow: 4px 5px 40px gray;
     }
 
+}
+
+#final-product {
+    text-align: center;
+}
+
+#final-product img {
+    max-width: 80%;
 }
 
 .wireframe {
@@ -620,3 +628,5 @@ body.locomotived {
     -webkit-transition: all 1s ease-out;
     transition: all 2s ease-out;
 }
+
+/* CONTACT */
