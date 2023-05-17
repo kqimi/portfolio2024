@@ -592,6 +592,12 @@ body.locomotived {
 
 }
 
+footer p {
+    font-family: "bilo", sans-serif;
+    font-weight: 500;
+
+}
+
 
 
 
@@ -630,3 +636,7 @@ body.locomotived {
 }
 
 /* CONTACT */
+
+.facescan {
+    width: 200px;
+}
